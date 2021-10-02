@@ -10,8 +10,7 @@ terraform {
 provider "aws" {
     region = "us-east-1"
     profile = "cw-training"
-    access_key = "AKIAU57AOQWFS754Q6XO"
-    secret_key = "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"
+    
 }
 
 locals {
