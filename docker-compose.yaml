@@ -1,5 +1,4 @@
-ersion: "3.7"
-
+version: "3.7"
 services:
     database:
         image: mysql:5.7
@@ -15,7 +14,6 @@ services:
               target: /docker-entrypoint-initdb.d/init.sql
         networks:
             - clarusnet
-
     app-server:
         env_file: .env
         image: "${ECR_REPO}:latest"
@@ -29,13 +27,10 @@ services:
             - "80:80"
         networks:
             - clarusnet
-
 networks:
     clarusnet:
-
 volumes:
     db-data:
-
 configs:
     table:
         file: ./init.sql
